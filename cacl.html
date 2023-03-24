@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="calc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+    function cl()
+    {
+        
+        var a=document.form1.text1.value;
+        var c=parseInt(a)
+        var b=document.form1.ct.value;
+        if(b=="farenheit")
+        {
+            var d=c*9;
+            c=d/5;
+            d=c+32;
+            var x=d+"°F"
+            document.form1.text2.value=x;
+
+        }
+        else if(b=="kelvin")
+        {
+            var d=c+273;
+            var x=d+"k"
+            document.form1.text2.value=x;
+        }
+    }
+
+</script>
+</head>
+<body>
+    <div><img src="1.png" style=" height:250px; float:left;"></div>
+    <div  id="nim">Temperature Converter</div>
+<div class="container" id="kk">
+        
+        <form name ="form1"  id="i1" class=".container">
+    <div>
+        <input type="text" class="rnd" name="text1"  id="ip" placeholder="Input temperature in celcius">
+    </div>
+    <div>
+        <input type="text" class="rnd" name="text2"  id="ip" placeholder="Output">
+    </div>
+    <div>
+        <select name="ct" id="er">
+        <option>farenheit</option>
+        <option>kelvin</option>
+    </select>
+
+    </div>
+    <div  class="container1">
+        <div class="fd" >
+            <input type="button" id="bt" class="rnd" onclick="cl()" value="Calculate">
+        </div>
+        <div class="fd" >
+            <input id="bt" class="rnd" type="reset">
+        </div>
+    </div>
+    </div>
+        </form>
+</div>
+    
+</body>
+</html>
